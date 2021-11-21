@@ -15,15 +15,20 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@emotion/react": "^11.4.1",
+    "@chakra-ui/gatsby-plugin": "^2.0.2",
+    "@chakra-ui/react": "^1.7.2",
+    "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.3.0",
-    "gatsby": "^3.11.1",
-    "gatsby-plugin-emotion": "^6.12.0",
-    "gatsby-plugin-netlify-cms": "^5.12.0",
-    "gatsby-plugin-typescript": "^3.12.0",
+    "@fontsource/annie-use-your-telescope": "^4.5.0",
+    "@fontsource/carrois-gothic-sc": "^4.5.0",
+    "framer-motion": "^5.3.1",
+    "gatsby": "^4.2.0",
+    "gatsby-plugin-image": "^2.2.0",
+    "gatsby-plugin-typescript": "^4.2.0",
     "netlify-cms-app": "^2.15.38",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "swiper": "^7.3.0",
     "typescript": "^4.3.5"
   },
   "devDependencies": {
@@ -31,7 +36,6 @@
     "@typescript-eslint/parser": "^4.15.1",
     "eslint": "^7.20.0",
     "eslint-config-airbnb": "^18.2.1",
-    "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",

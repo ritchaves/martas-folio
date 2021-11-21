@@ -4,8 +4,9 @@ module.exports = {
     title: "Maccira",
   },
   plugins: [
-    "gatsby-plugin-netlify-cms", 
-    "gatsby-plugin-emotion", 
+    "@chakra-ui/gatsby-plugin",
     "gatsby-plugin-typescript",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
   ],
 };
