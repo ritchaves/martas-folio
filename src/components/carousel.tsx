@@ -1,29 +1,29 @@
-import React, { useState } from 'react'
-import { Navigation, Swiper as InterfaceSwiper } from 'swiper'
-import { SwiperSlide, Swiper } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import { StaticImage } from 'gatsby-plugin-image'
-import { Flex, Text } from '@chakra-ui/react'
-import { Link } from 'gatsby'
+import React, { useState } from 'react';
+import { Navigation, Swiper as InterfaceSwiper } from 'swiper';
+import { SwiperSlide, Swiper } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { StaticImage } from 'gatsby-plugin-image';
+import { Fade, Flex, Text } from '@chakra-ui/react';
+import { Link } from 'gatsby';
 
 const CATEGORIES = [
-  'About me',
   'Character Design',
   'Illustrations',
   'Storyboards',
+  'About me',
   'Webtoons',
-]
+];
 
 const Carousel = (): JSX.Element => {
-  const [selectedSlide, setSelectedSlide] = useState(CATEGORIES[0])
-  const [indexSelectedSlide, setSelectedIndex] = useState(1)
+  const [selectedSlide, setSelectedSlide] = useState(CATEGORIES[0]);
+  const [indexSelectedSlide, setSelectedIndex] = useState(1);
 
   const changeSelectedSlide = (e: InterfaceSwiper) => {
-    const index = e.realIndex
-    setSelectedSlide(CATEGORIES[index])
-    setSelectedIndex(index + 1)
-  }
+    const index = e.realIndex;
+    setSelectedSlide(CATEGORIES[index]);
+    setSelectedIndex(index + 1);
+  };
 
   return (
     <>
@@ -40,16 +40,13 @@ const Carousel = (): JSX.Element => {
         style={{ marginTop: '80px' }}
       >
         <SwiperSlide>
-          <Link to="/about-me/">
-            <StaticImage src="https://placekitten.com/800/800" alt="A kitten" />
-          </Link>
-          <Text fontSize="xs" align="end">
-            About me
-          </Text>
-        </SwiperSlide>
-        <SwiperSlide>
           <Link to="/character-design/">
-            <StaticImage src="https://placekitten.com/800/800" alt="A kitten" />
+            <StaticImage
+              src="../images/char_design/Marta_Ferreira_Personal_Artwork2.jpg"
+              alt="Vampire character design"
+              height={800}
+              width={800}
+            />
           </Link>
           <Text fontSize="xs" align="end">
             Character Design
@@ -72,7 +69,15 @@ const Carousel = (): JSX.Element => {
           </Text>
         </SwiperSlide>
         <SwiperSlide>
-          <Link to="/character-design/">
+          <Link to="/about-me/">
+            <StaticImage src="../images/Icon_Reboot_1.png" alt="Onigiri" />
+          </Link>
+          <Text fontSize="xs" align="end">
+            About me
+          </Text>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Link to="/webtoons/">
             <StaticImage src="https://placekitten.com/800/800" alt="A kitten" />
           </Link>
           <Text fontSize="xs" align="end">
@@ -84,12 +89,14 @@ const Carousel = (): JSX.Element => {
         <Text align="start" margin="35" fontSize="larger">
           {indexSelectedSlide} / 5
         </Text>
-        <Text align="end" margin="35" fontSize="5xl">
-          {selectedSlide}
-        </Text>
+        <Fade in={Boolean(selectedSlide)}>
+          <Text align="end" margin="35" fontSize="5xl">
+            {selectedSlide}
+          </Text>
+        </Fade>
       </Flex>
     </>
-  )
-}
+  );
+};
 
-export default Carousel
+export default Carousel;

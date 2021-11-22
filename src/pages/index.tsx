@@ -1,10 +1,10 @@
-import { ChakraProvider } from '@chakra-ui/react'
-import React from 'react'
-import Carousel from '../components/carousel'
-import Header from '../components/header'
-import theme from '../utils/theme'
-import '@fontsource/annie-use-your-telescope/index.css'
-import '@fontsource/carrois-gothic-sc/index.css'
+import { ChakraProvider } from '@chakra-ui/react';
+import React from 'react';
+import Carousel from '../components/carousel';
+import Header from '../components/header';
+import theme from '../utils/theme';
+import '@fontsource/annie-use-your-telescope/index.css';
+import '@fontsource/carrois-gothic-sc/index.css';
 
 const IndexPage = (): JSX.Element => {
   return (
@@ -12,7 +12,7 @@ const IndexPage = (): JSX.Element => {
       <Header />
       <Carousel />
     </ChakraProvider>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
