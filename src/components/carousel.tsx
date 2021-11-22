@@ -65,14 +65,14 @@ const Carousel = (): JSX.Element => {
             Illustrations
           </Text>
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <Link to="/storyboards/">
             <StaticImage src="https://placekitten.com/800/800" alt="A kitten" />
           </Link>
           <Text fontSize="xs" align="end">
             Storyboards
           </Text>
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           <Link to="/about-me/">
             <StaticImage src="../images/Icon_Reboot_1.png" alt="Onigiri" />
@@ -83,7 +83,12 @@ const Carousel = (): JSX.Element => {
         </SwiperSlide>
         <SwiperSlide>
           <Link to="/webtoons/">
-            <StaticImage src="https://placekitten.com/800/800" alt="A kitten" />
+            <StaticImage
+              src="../images/webtoons/igie_bannersaturated.jpg"
+              alt="webtoon_ichie"
+              width={800}
+              height={800}
+            />
           </Link>
           <Text fontSize="xs" align="end">
             Webtoons
