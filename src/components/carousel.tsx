@@ -42,7 +42,7 @@ const Carousel = (): JSX.Element => {
         <SwiperSlide>
           <Link to="/character-design/">
             <StaticImage
-              src="../images/char_design/Marta_Ferreira_Personal_Artwork2.jpg"
+              src="../images/CharDesign_banner.png"
               alt="Vampire character design"
               height={800}
               width={800}
@@ -54,7 +54,12 @@ const Carousel = (): JSX.Element => {
         </SwiperSlide>
         <SwiperSlide>
           <Link to="/illustrations/">
-            <StaticImage src="https://placekitten.com/800/800" alt="A kitten" />
+            <StaticImage
+              src="../images/Illustration_banner.png"
+              alt="Illustration Linear Perpective"
+              height={800}
+              width={800}
+            />
           </Link>
           <Text fontSize="xs" align="end">
             Illustrations
