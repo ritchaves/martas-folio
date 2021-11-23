@@ -8,7 +8,13 @@ import theme from '../utils/theme';
 
 const AboutMeText = ({ children }: { children: string }) => {
   return (
-    <Text background="#FAEFE9" p="2" m="3" css={{ width: 'fit-content' }}>
+    <Text
+      background="#FAEFE9"
+      p="2"
+      m="3"
+      css={{ width: 'fit-content' }}
+      fontSize="lg"
+    >
       {children}
     </Text>
   );
@@ -19,9 +25,8 @@ const AboutMe = (): JSX.Element => {
     <ChakraProvider theme={theme}>
       <Header />
       <Flex
-        marginTop="150"
-        marginLeft="250"
-        marginRight="250"
+        margin="150px auto"
+        width="1070px"
         css={{ position: 'relative', alignItems: 'center' }}
       >
         <Flex
@@ -31,7 +36,6 @@ const AboutMe = (): JSX.Element => {
             zIndex: 1,
             lineHeight: 2,
             alignItems: 'flex-end',
-            marginLeft: '-60px',
           }}
         >
           <AboutMeText>Hello!</AboutMeText>
@@ -52,7 +56,10 @@ const AboutMe = (): JSX.Element => {
             which I hope shows in all my pieces!
           </AboutMeText>
         </Flex>
-        <Flex flexDirection="column" style={{ marginLeft: 'auto' }}>
+        <Flex
+          flexDirection="column"
+          style={{ marginLeft: 'auto', position: 'relative' }}
+        >
           <StaticImage
             src="../images/Icon_Reboot_1.png"
             alt="maccira"

@@ -10,7 +10,7 @@ import { Link } from 'gatsby';
 const CATEGORIES = [
   'Character Design',
   'Illustrations',
-  'Storyboards',
+  // 'Storyboards',
   'About me',
   'Webtoons',
 ];
@@ -97,7 +97,7 @@ const Carousel = (): JSX.Element => {
       </Swiper>
       <Flex paddingLeft="350" paddingRight="350" justify="space-between">
         <Text align="start" margin="35" fontSize="larger">
-          {indexSelectedSlide} / 5
+          {indexSelectedSlide} / {CATEGORIES.length}
         </Text>
         <Fade in={Boolean(selectedSlide)}>
           <Text align="end" margin="35" fontSize="5xl">

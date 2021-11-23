@@ -6,6 +6,12 @@ import Gallery from 'react-photo-gallery';
 import photos from '../utils/photo-illustration';
 
 const Illustrations = (): JSX.Element => {
+  // const onClick = (e: React.MouseEvent, obj: any) => {
+  //   const src = obj.photo.src;
+  //   console.log(obj);
+  //   console.log(src);
+  //   console.log(e.target.src);
+  // };
   return (
     <ChakraProvider theme={theme}>
       <Header />
