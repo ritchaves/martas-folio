@@ -1,13 +1,14 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://maccira.art",
     title: "Maccira",
   },
   plugins: [
-    "@chakra-ui/gatsby-plugin",
     "gatsby-plugin-typescript",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

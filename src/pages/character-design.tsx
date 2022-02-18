@@ -1,18 +1,27 @@
-import { Box, ChakraProvider } from '@chakra-ui/react';
-import React from 'react';
-import Gallery from 'react-photo-gallery';
+import React, { useState } from 'react';
 import Header from '../components/header';
-import theme from '../utils/theme';
 import photos from '../utils/photo-char-design';
+import Gallery from '../components/gallery';
+import ModalPictures from '../components/modal';
 
 const CharacterDesign = (): JSX.Element => {
+  const [openPicture, setOpenPicture] = useState<string>('');
+
+  const handleModal = (src: string) => {
+    setOpenPicture(src);
+  };
+
   return (
-    <ChakraProvider theme={theme}>
+    <>
+      {Boolean(openPicture) && (
+        <ModalPictures
+          setOpenPicture={setOpenPicture}
+          openPicture={openPicture}
+        />
+      )}
       <Header />
-      <Box m="20">
-        <Gallery photos={photos} direction="column" />;
-      </Box>
-    </ChakraProvider>
+      <Gallery photos={photos} handleModal={handleModal} />
+    </>
   );
 };
 

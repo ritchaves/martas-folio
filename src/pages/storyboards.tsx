@@ -1,13 +1,11 @@
-import { ChakraProvider } from '@chakra-ui/react';
 import React from 'react';
 import Header from '../components/header';
-import theme from '../utils/theme';
 
-const Storyboards = () => {
+const Storyboards = (): JSX.Element => {
   return (
-    <ChakraProvider theme={theme}>
+    <>
       <Header />
-    </ChakraProvider>
+    </>
   );
 };
 

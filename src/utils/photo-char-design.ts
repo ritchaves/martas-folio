@@ -9,44 +9,28 @@ import CharacterDesignFishman from '../images/char_design/sketchbook1.jpg'
 
 const photos = [
   {
-    src: CharacterDesignBug,
-    width: 8,
-    height: 5,
-  },
-  {
     src: CharacterDesignBathtub,
-    width: 10,
-    height: 7,
   },
   {
     src: CharacterDesignHalfZombie,
-    width: 8,
-    height: 4,
+  },
+  {
+    src: CharacterDesignBug,
   },
   {
     src: CharacterDesignFishman,
-    width: 13,
-    height: 18,
   },
   {
     src: CharacterDesignMistborn,
-    width: 8,
-    height: 4,
-  },
-  {
-    src: CharacterDesignLittleGirl,
-    width: 8,
-    height: 6,
-  },
-  {
-    src: CharacterDesignVampire,
-    width: 4,
-    height: 3,
   },
   {
     src: CharacterDesignRotation,
-    width: 8,
-    height: 8,
+  },
+  {
+    src: CharacterDesignVampire,
+  },
+  {
+    src: CharacterDesignLittleGirl,
   },
 ]
 

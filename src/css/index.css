@@ -1,0 +1,14 @@
+@import '@fontsource/barrio/index.css';
+@import '@fontsource/bubbler-one/index.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'bubbler one', sans-serif;
+}
+
+h1 {
+  font-family: 'barrio', sans-serif;
+}

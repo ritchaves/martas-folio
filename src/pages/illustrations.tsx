@@ -1,24 +1,27 @@
-import { Box, ChakraProvider } from '@chakra-ui/react';
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/header';
-import theme from '../utils/theme';
-import Gallery from 'react-photo-gallery';
 import photos from '../utils/photo-illustration';
+import Gallery from '../components/gallery';
+import ModalPictures from '../components/modal';
 
 const Illustrations = (): JSX.Element => {
-  // const onClick = (e: React.MouseEvent, obj: any) => {
-  //   const src = obj.photo.src;
-  //   console.log(obj);
-  //   console.log(src);
-  //   console.log(e.target.src);
-  // };
+  const [openPicture, setOpenPicture] = useState<string>('');
+
+  const handleModal = (src: string) => {
+    setOpenPicture(src);
+  };
+
   return (
-    <ChakraProvider theme={theme}>
+    <>
+      {Boolean(openPicture) && (
+        <ModalPictures
+          setOpenPicture={setOpenPicture}
+          openPicture={openPicture}
+        />
+      )}
       <Header />
-      <Box m="20">
-        <Gallery photos={photos} direction="column" />;
-      </Box>
-    </ChakraProvider>
+      <Gallery photos={photos} handleModal={handleModal} />
+    </>
   );
 };
 

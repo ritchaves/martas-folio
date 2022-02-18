@@ -4,7 +4,6 @@ import { SwiperSlide, Swiper } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Fade, Flex, Text } from '@chakra-ui/react';
 import { Link } from 'gatsby';
 
 const CATEGORIES = [
@@ -26,7 +25,7 @@ const Carousel = (): JSX.Element => {
   };
 
   return (
-    <>
+    <div className="flex justify-center items-center flex-col h-80v">
       <Swiper
         spaceBetween={50}
         slidesPerView={3}
@@ -37,7 +36,7 @@ const Carousel = (): JSX.Element => {
         navigation
         centeredSlides
         onSlideChange={(e) => changeSelectedSlide(e)}
-        style={{ marginTop: '80px' }}
+        style={{ width: '100%' }}
       >
         <SwiperSlide>
           <Link to="/character-design/">
@@ -48,9 +47,7 @@ const Carousel = (): JSX.Element => {
               width={800}
             />
           </Link>
-          <Text fontSize="xs" align="end">
-            Character Design
-          </Text>
+          <p className="text-xs flex justify-end">Character Design</p>
         </SwiperSlide>
         <SwiperSlide>
           <Link to="/illustrations/">
@@ -61,9 +58,7 @@ const Carousel = (): JSX.Element => {
               width={800}
             />
           </Link>
-          <Text fontSize="xs" align="end">
-            Illustrations
-          </Text>
+          <p className="text-xs flex justify-end">Illustrations</p>
         </SwiperSlide>
         {/* <SwiperSlide>
           <Link to="/storyboards/">
@@ -77,9 +72,7 @@ const Carousel = (): JSX.Element => {
           <Link to="/about-me/">
             <StaticImage src="../images/Icon_Reboot_1.png" alt="Onigiri" />
           </Link>
-          <Text fontSize="xs" align="end">
-            About me
-          </Text>
+          <p className="text-xs flex justify-end">About me</p>
         </SwiperSlide>
         <SwiperSlide>
           <Link to="/webtoons/">
@@ -90,22 +83,16 @@ const Carousel = (): JSX.Element => {
               height={800}
             />
           </Link>
-          <Text fontSize="xs" align="end">
-            Webtoons
-          </Text>
+          <p className="text-xs flex justify-end">Webtoons</p>
         </SwiperSlide>
       </Swiper>
-      <Flex paddingLeft="350" paddingRight="350" justify="space-between">
-        <Text align="start" margin="35" fontSize="larger">
+      <div className="flex justify-evenly w-3/4 m-10">
+        <p className="text-m">
           {indexSelectedSlide} / {CATEGORIES.length}
-        </Text>
-        <Fade in={Boolean(selectedSlide)}>
-          <Text align="end" margin="35" fontSize="5xl">
-            {selectedSlide}
-          </Text>
-        </Fade>
-      </Flex>
-    </>
+        </p>
+        <p className="text-5xl">{selectedSlide}</p>
+      </div>
+    </div>
   );
 };
 

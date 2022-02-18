@@ -1,43 +1,29 @@
-import { Flex, ChakraProvider, Text } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
 import Header from '../components/header';
 import SocialMediaIcons from '../components/social-media-icons';
-import theme from '../utils/theme';
 
 const AboutMeText = ({ children }: { children: string }) => {
   return (
-    <Text
-      background="#FAEFE9"
-      p="2"
-      m="3"
-      css={{ width: 'fit-content' }}
-      fontSize="lg"
-    >
-      {children}
-    </Text>
+    <p className="text-lg p-2 m-3 bg-[#FAEFE9] ml-auto w-fit">{children}</p>
   );
 };
 
 const AboutMe = (): JSX.Element => {
   return (
-    <ChakraProvider theme={theme}>
+    <>
       <Header />
-      <Flex
-        margin="150px auto"
-        width="1070px"
-        css={{ position: 'relative', alignItems: 'center' }}
-      >
-        <Flex
-          flexDirection="column"
-          css={{
-            position: 'absolute',
-            zIndex: 1,
-            lineHeight: 2,
-            alignItems: 'flex-end',
-          }}
-        >
+      <div className="flex items-center justify-center lg:h-80v p-20 lg:flex-row xs:flex-col relative">
+        <div className="flex flex-col lg:ml-500">
+          <StaticImage
+            src="../images/Icon_Reboot_1.png"
+            alt="maccira"
+            width={500}
+          />
+          <SocialMediaIcons />
+        </div>
+        <div className="leading-loose z-10 lg:absolute xs:relative lg:-ml-400">
           <AboutMeText>Hello!</AboutMeText>
           <AboutMeText>
             My name is Marta Ferreira, although I more commonly go by my artist
@@ -55,20 +41,9 @@ const AboutMe = (): JSX.Element => {
             Above all, I love storytelling and using art as a medium for it,
             which I hope shows in all my pieces!
           </AboutMeText>
-        </Flex>
-        <Flex
-          flexDirection="column"
-          style={{ marginLeft: 'auto', position: 'relative' }}
-        >
-          <StaticImage
-            src="../images/Icon_Reboot_1.png"
-            alt="maccira"
-            width={500}
-          />
-          <SocialMediaIcons />
-        </Flex>
-      </Flex>
-    </ChakraProvider>
+        </div>
+      </div>
+    </>
   );
 };
 

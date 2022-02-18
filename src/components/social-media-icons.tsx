@@ -2,7 +2,6 @@ import { FiInstagram } from 'react-icons/fi';
 import { SiWebtoon } from 'react-icons/si';
 import { FaLinkedin } from 'react-icons/fa';
 import React from 'react';
-import { Flex } from '@chakra-ui/layout';
 
 const INSTAGRAM_MACCIRA = 'https://www.instagram.com/_maccira/';
 const WEBTOON_MACCIRA =
@@ -13,7 +12,7 @@ const LINKEDIN_MACCIRA =
 const SocialMediaIcons = (): JSX.Element => {
   const clickSocialMedia = (link: string) => () => window.open(link, '_blank');
   return (
-    <Flex alignSelf="end" m="1">
+    <div className="flex justify-end m-1">
       <FiInstagram
         size="27"
         style={{ margin: '0 5px', cursor: 'pointer' }}
@@ -29,7 +28,7 @@ const SocialMediaIcons = (): JSX.Element => {
         style={{ margin: '0 5px', cursor: 'pointer' }}
         onClick={clickSocialMedia(LINKEDIN_MACCIRA)}
       />
-    </Flex>
+    </div>
   );
 };
 
