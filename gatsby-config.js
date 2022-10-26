@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://maccira.art",
-    title: "Maccira",
+    title: "maccira",
   },
   plugins: [
     "gatsby-plugin-typescript",
